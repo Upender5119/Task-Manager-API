@@ -1,0 +1,20 @@
+{
+    "include": [
+        "src"
+    ],
+    "useLibraryCodeForTypes": true,
+    "reportMissingTypeStubs": false,
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false,
+    "reportOptionalIterable": false,
+    "reportGeneralTypeIssues": false,
+    "reportOptionalSubscript": false,
+    "reportOptionalMemberAccess": false,
+    "reportSelfClsParameterName": false,
+    "executionEnvironments": [
+        {
+            "root": "src"
+        }
+    ]
+
+}

@@ -1,0 +1,51 @@
+[tool.pyright]
+include = ["src", "tests"]
+exclude = ["**/node_modules", "**/__pycache__", "contracts", "**/*.zip"]
+reportMissingImports=true
+reportMissingTypeStubs=false
+reportPrivateImportUsage=false  # Set this to false to ignore contract model import errors using the package root
+venv="idp_venv"
+
+defineConstant = { DEBUG = true }
+
+[tool.vulture]
+min_confidence = 80
+
+[tool.isort]
+combine_as_imports=true
+line_length=160
+lines_between_sections=1
+multi_line_output=3
+skip=[".git", ".eggs", "idp_venv","tests"]
+
+[tool.pylint.idp]
+disable=[
+    "invalid-name",                           # "C0103"
+    "missing-module-docstring",               # "C0114"
+    "missing-class-docstring",                # "C0115"
+    "missing-function-docstring",             # "C0116"
+    "wrong-hanging-indentation-before-block", # "C0330"
+    "no-self-use",                            # "R0201"
+    "duplicate-code",                         # "R0801"
+    "too-many-instance-attributes",           # "R0902"
+    "too-few-public-methods",                 # "R0903"
+    "too-many-public-methods",                # "R0904"
+    "too-many-arguments",                     # "R0913"
+    "too-many-locals",                        # "R0914"
+  # "line-too-long",                          # "C0301"
+  # "missing-final-newline",                  # "C0304"
+  # "too-many-return-statements",             # "R0911"
+  # "too-many-branches",                      # "R0912"
+  # "string-statement-has-no-effect",         # "W0105"
+]
+ignore=[]
+max-line-length=160
+notes=[]
+
+[tool.pylint.MASTER]
+load-plugins= "pylint_quotes"
+
+[tool.pylint.STRING_QUOTES]
+docstring-quote="double"
+string-quote="double-avoid-escape"
+triple-quote="double"
