@@ -4,8 +4,8 @@ import psycopg2.extras
 DB_CONFIG = {
     'host': 'localhost',
     'database': 'task_manager',
-    'user': 'postgres',
-    'password': 'upender',
+    'user': 'your_user_name',
+    'password': 'your_user_password',
     'port': 5432
 }
 
